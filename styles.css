@@ -1,0 +1,36 @@
+/* Ensure body and html take up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Makes sure the page layout grows vertically */
+}
+
+/* Make the main content flexible so it grows and takes up the available space */
+.main-content {
+    flex-grow: 1; /* Makes the content area take available space */
+}
+
+/* Ensure footer is always at the bottom */
+footer {
+    position: relative;
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    transform: translateY(100%); /* Initially hide the footer below the page */
+    transition: transform 0.3s ease-in-out; /* Smooth transition when footer comes into view */
+}
+
+/* When the content is long enough to push the footer, it should stay at the bottom */
+body.scrolled footer {
+    transform: translateY(0); /* Footer becomes visible when scrolling */
+}
+
+/* If the content is small, footer will stick at the bottom */
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
