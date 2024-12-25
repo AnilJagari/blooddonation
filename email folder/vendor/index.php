@@ -11,13 +11,13 @@ try {
     $mail->isSMTP();                                      
     $mail->Host       = 'smtp.gmail.com';               
     $mail->SMTPAuth   = true;                             
-    $mail->Username   = 'projectbd123@gmail.com';               
-    $mail->Password   = 'tqnz yfpb wzid iycj';                         
+              
+                        
     $mail->SMTPSecure = 'tls';                            
     $mail->Port       = 587;                              
 
     //Recipients
-    $mail->setFrom('projectbd123@gmail.com',"sam");
+    
     $mail->addAddress('vinaykumar954258@gmail.com',"vinay");     
 
     //Content
